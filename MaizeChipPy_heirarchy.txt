@@ -1,0 +1,7 @@
+MaizeChipPy/
+	MaizeChipPy/
+		__init__.py
+		initialize.py
+		a_funcs.py
+		b_funcs.py
+	setup.py
