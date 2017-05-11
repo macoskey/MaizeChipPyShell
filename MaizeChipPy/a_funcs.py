@@ -68,15 +68,7 @@ def a_wait(n):
 	
 	return 0
 	
-def a_waitset(n):
+def a_waitsetc(n):
 	
 	return 0
-	
-def a_fire(n):
-	
-	return 0
-	
-def a_fire(n):
-	
-	return 0
-	
+
