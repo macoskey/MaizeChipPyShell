@@ -1,4 +1,5 @@
-# initialization file for MaizeChipPy
+# initialization file for MaizeChipPy 1.0
+# J. Macoskey - May 2017 - U of Michigan
 
 # maize_init function
 from .initialize import maize_init

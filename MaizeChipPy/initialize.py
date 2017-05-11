@@ -21,6 +21,18 @@ def maize_init(com_number):
 		break
 	except:
 		print "An error has occured... restart everything\n"
+	return 0
+		
+		
+def open_serial_port():
+	global ser
+	try:
+		ser.open()
+		break
+	except:
+		# port already open
+	ser.reset_output_buffr()
+	return 0
 			
 	
 	

@@ -4,26 +4,19 @@
 
 import serial
 import numpy as np
+from initialize import open_serial_port
 
 # pre-defined parameters
 startcode = 170;
 endcode = 85;
 bcmd = 5;
-acmd = 3;
-
 	
 def a_fire(n):
 	global ser
-	try:
-		ser.open()
-		break
-	except:
-		# port already open
-	ser.reset_output_buffr()
+	open_serial_port
 	
-	data = np.array([0, 0, 0, n, 8])
+	data_send = np.array([startcode,bcmd,0, 0, 0, n, 8,endcode,1,1,1,1,1,1,1,1])
 	ser.write(data)
-	
 	return 0
 	
 def a_halt(n):

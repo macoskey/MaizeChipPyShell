@@ -1,6 +1,8 @@
 
 # setup file for the MaizeChipPy package
-# copyright Jon Macoskey, University of Michigan Dept. of Biomedical Engineering
+# copyright Jon Macoskey
+# University of Michigan Dept. of Biomedical Engineering
+# Image-Guided Ultrasound Therapy Laboratory
 # Version 1.0 - May 2017
 
 from setuptools import setup
