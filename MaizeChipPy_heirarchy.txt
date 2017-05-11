@@ -1,7 +1,11 @@
-MaizeChipPy/
+Before running MaizeChipPy, make sure you have the following packages installed:
+- serialpy
+
+Heirarchy:
 	MaizeChipPy/
-		__init__.py
-		initialize.py
-		a_funcs.py
-		b_funcs.py
-	setup.py
+		MaizeChipPy/
+			__init__.py
+			initialize.py
+			a_funcs.py
+			b_funcs.py
+		setup.py
