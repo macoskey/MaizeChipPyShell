@@ -17,7 +17,7 @@ def b_stop_execution:
 	
 	bdaddr = 0
 	bcmd = 0
-	data_send = np.array([startcode,bcmd,0,0,0,0,0,endcode,1,1,1,1,1,1,1,1])
+	data_send = np.array([startcode,bcmd,0,0,0,0,0,endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	ser.write(data_send)
 	return 0
 	
@@ -26,7 +26,7 @@ def b_mask_off:
 	open_serial_port()
 	
 	bcmd = 13
-	data_send = np.array([startcode,bcmd,0,255,255,255,255,endcode,1,1,1,1,1,1,1,1])
+	data_send = np.array([startcode,bcmd,0,255,255,255,255,endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	ser.write(data_send)
 	return 0
 	
@@ -35,7 +35,7 @@ def b_select_motherboard(n):
 	open_serial_port()
 	
 	bcmd = 10
-	data_send = np.array([startcode,bcmd,0,0,0,0,n % 256,endcode,1,1,1,1,1,1,1,1])
+	data_send = np.array([startcode,bcmd,0,0,0,0,n % 256,endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	ser.write(data_send)
 	return 0
 	
@@ -44,7 +44,7 @@ def b_set_chipmem_wloc(n):
 	open_serial_port()
 	
 	bcmd = 6
-	data_send = np.array([startcode,bcmd,0,0,0,floor(n/256),n % 256,endcode,1,1,1,1,1,1,1,1])
+	data_send = np.array([startcode,bcmd,0,0,0,floor(n/256),n % 256,endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	ser.write(data_send)
 	return 0
 	
@@ -53,7 +53,7 @@ def b_set_imem_wloc(n):
 	open_serial_port()
 	
 	bcmd = 4
-	data_send = np.array([startcode,bcmd,0,0,0,floor(n/256),n % 256,endcode,1,1,1,1,1,1,1,1])
+	data_send = np.array([startcode,bcmd,0,0,0,floor(n/256),n % 256,endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	return 0
 	
 	
@@ -82,7 +82,7 @@ def b_execute_program(n):
 	open_serial_port()
 	
 	bcmd = 1
-	data_write = np.array([startcode,bcmd,0,0,0,floor(n/256),n % 256,endcode,1,1,1,1,1,1,1,1])
+	data_write = np.array([startcode,bcmd,0,0,0,floor(n/256),n % 256,endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	
 	ser.write(data_send)
 	return 0
@@ -92,7 +92,7 @@ def b_write_chipmem(n):
 	open_serial_port()
 	
 	bcmd = 7
-	data_write = np.array([startcode,bcmd,0,n[3],n[2],n[1],n[0],endcode,1,1,1,1,1,1,1,1])
+	data_write = np.array([startcode,bcmd,0,n[3],n[2],n[1],n[0],endcode,1,1,1,1,1,1,1,1],dtype='uint8')
 	
 	ser.write(data_send)
 	return 0
